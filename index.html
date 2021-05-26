@@ -1,0 +1,181 @@
+<!-- REACT DEVELOPMENT -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iflix</title>
+<!-- React CDN -->
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<!-- React DOM -->
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<!-- Babel Library -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body{
+        background: url("image/bg-img.png ")no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        align-items: center;
+        text-align: center;
+    }
+    .form{
+        margin-top: 7%;
+        text-align: center;
+        background-color:white;
+        width: 30%;
+        border-radius: 5px;
+        margin-left: 35%;
+    }
+    .exit{
+        padding:10px;
+        margin-right: -90%;
+        font-family: Bahnschrift Light;
+        font-size: 18px;
+        color: gray;
+        cursor: pointer;
+        }
+    .username, .password{
+        width: 88%;
+        border: none;
+        background-color:#F5F5F5;
+        height: 40px;
+        margin-bottom:20px;
+        padding-left: 13px;
+        border-radius: 5px;
+    }
+    .submit{
+        width: 91%;
+        border: none;
+        background-color:#ffd0d0;
+        height: 40px;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .signUp{
+        font-family: Bahnschrift Light;
+        font-size: 15px;
+    }
+    .signUp a{
+        text-decoration: none;
+        color: #fd5602;
+        font-weight: bold;
+    }
+    .optQR{
+        font-size: 14px;
+        color:rgb(212, 210, 210);
+    }
+    .optQR::before{
+            position:absolute;
+            content: '';
+            width: 4.2%;
+            height: 1px;
+            background: rgb(212, 210, 210);
+            left: 565px;
+            top: 51%;
+        }
+        .optQR::after{
+            position:absolute;
+            content: '';
+            width: 4.2%;
+            height: 1px;
+            background: rgb(212, 210, 210);
+            right: 565px;
+            top: 51%;
+        }  
+    .QR{
+        height: 80px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+    .optLogIn{
+        color: rgb(212, 210, 210);
+        font-size: 14px;
+    }
+    .optLogIn::before{
+            position:absolute;
+            content: '';
+            width: 10.2%;
+            height: 1px;
+            background: rgb(212, 210, 210);
+            left: 565px;
+            top: 71%;
+        }
+        .optLogIn::after{
+            position:absolute;
+            content: '';
+            width: 10.2%;
+            height: 1px;
+            background: rgb(212, 210, 210);
+            right: 565px;
+            top: 71%;
+        }
+    .fab{
+        height: 65px;
+        margin-bottom: 30px;
+    }
+    .gog{
+        height: 70px;
+        margin-left: 160px;
+        margin-bottom: 30px;
+    }
+</style>
+</head>
+<body>
+    <!-- React js it is the javascript framework -->
+
+    <!-- REACT CONTENT LOCATION -->
+    <div id="app">React has not rendered yet.</div>
+    <!-- JAVASCRIPT CODE/SYNTAX -->
+    <script type="text/babel">
+var LogInForm = function(){
+        return(
+            //form
+            <div class="form">
+                <div class="exit">x</div>
+            <div>
+                <input type="text" class="username" placeholder="Please input phone number or email"/>
+            </div>
+            <div>
+                <input type="password" class="password" placeholder="Please input Password"/>
+            </div>
+            <div>
+                <input type="submit" class="submit" value="Log In"/>
+            </div>
+            <div class="signUp">
+                <p>Don't have an account?<a href="#"> Sign up now</a></p>
+            </div>
+            <div class="optQR">
+                <p>Or open iflix app to scan this QR code to log in</p>
+            </div>
+            <div>
+                <img src="image/qr.png"  class="QR"/>
+            </div>
+            <div class="optLogIn">
+                <p>or log in with</p>
+            </div>
+            <div>
+                <a href="#"><img src="image/facebook.png" class="fab"/></a>
+                <a href="#"><img src="image/google.png" class="gog"/></a>
+            </div>
+            </div>
+        )
+    }
+ReactDOM.render (
+        <div>
+            <LogInForm/>
+        </div>, 
+        //WHERE - div with ID of app
+        document.getElementById('app')
+  );
+    </script>
+    
+    
+</body>
+</html>
